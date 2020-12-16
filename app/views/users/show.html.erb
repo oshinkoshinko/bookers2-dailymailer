@@ -1,15 +1,20 @@
+<h1>Users#show</h1>
 
-<h1>User info</h1>
-  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-  <h4>name <%= @user.name %></h4>
-  <h4>introduction <%= @user.introduction %></h4>
-<%= link_to "編集ロゴ", edit_user_path(@user.id) %>
+<%= render 'users/list', user: @user %>
+<%= render 'books/list', book: @book %>
 
-<h1>New book</h1>
-<%= form_with model:@book, local:true do |f| %>
-  <label for="inputTitle">Title</label><br>
-  <%= f.text_field :title, autofocus: true, id:"inputTitle" %><br>
-  <label for="inputOpinion">Opinion</label><br>
-  <%= f.text_area :opinion, autofocus: true, id:"inputOpinion" %><br>
-  <%= f.submit "Create Book" %>
-<% end %>
+<h1>Books</h1>
+<table class="table">
+  <tr>
+    <td></td>
+    <td>Title</td>
+    <td>Opinion</td>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+    <td><%= attachment_image_tag @user, :profile_image, :fill, 10, 10, fallback: "no_image.jpg" %></th>
+    <td><%= book.title %></th>
+    <td><%= book.opinion %></th>
+   </tr>
+   <% end %>
+</table>

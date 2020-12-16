@@ -1,6 +1,11 @@
+<%= render 'users/list', user: @user %>
+<%= render 'books/list', book: @book %>
+
+<h1>books#show</h1>
+
 
   <h1>Book detail</h1>
     <p>no image</p>
-   <td><%= link_to @book.title %></td>
-   <td><%= link_to @book.opinion %></td>
+   <td><%= @book.title %></td>
+   <td><%=  @book.opinion %></td>
 
