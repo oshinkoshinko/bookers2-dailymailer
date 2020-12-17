@@ -1,8 +1,8 @@
 <h1>books#index</h1>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this obj from being saved:
+  <%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:<br>
   <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
+    ・<%= message %><br>
   <% end %>
 <% end %>
 <%= render 'users/list', user: @user %>
