@@ -12,7 +12,7 @@
   </tr>
   <% @users.each do |user| %>
   <tr>
-    <td><%= attachment_image_tag @user, :profile_image, :fill, 10, 10, fallback: "no_image.jpg" %></th>
+    <td><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %></th>
     <td><%= user.name %></th>
     <td><%= link_to "Show", user_path(user.id) %></th>
    </tr>

@@ -1,5 +1,9 @@
-<h1>User info</h1>
+<h1>User info</h1><br>
   <%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
   <h4>name <%= user.name %></h4>
   <h4>introduction <%= user.introduction %></h4>
-<%= link_to "編集ロゴ", edit_user_path(user.id) %>
+  <% if user == current_user %>
+    <%= link_to "編集ロゴ", edit_user_path(user.id) %>
+  <% else %>
+    <%= link_to "編集ロゴ", user_path(current_user) %>
+  <% end %>
