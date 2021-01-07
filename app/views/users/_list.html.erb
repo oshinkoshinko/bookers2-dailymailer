@@ -3,8 +3,8 @@
   <table class="table font-weight-bold">
     <tr><th>name</th><td><%= user.name %></td></tr>
     <tr><th>introduction</th><td><%= user.introduction %></td></tr>
-    <tr><th>フォロー数</th><td><%= user.following.count %></td></tr>
-    <tr><th>フォロワー数</th><td><%= user.followers.count %></td></tr>
+    <tr><th>フォロー数</th><td><%= link_to user.following.count, user_following_path(user) %></td></tr>
+    <tr><th>フォロワー数</th><td><%= link_to user.followers.count, user_followers_path(user) %></td></tr>
   </table>
     <% if current_user.id == user.id %>
       <%= link_to edit_user_path(user.id) do%>
