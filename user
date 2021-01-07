@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/ec2-user/environment/bookers2/app/views/users/index.html.erb:21 ActionView::CompiledTemplates#_app_views_users_index_html_erb___2115592658839323227_70221930409340:
+
+    [1;34m16[0m:         <tr>
+    [1;34m17[0m:           <td><%= attachment_image_tag user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg", size:'50x50' %></th>
+    [1;34m18[0m:           <td><%= user.name %></th>
+    [1;34m19[0m:           <td>フォロー数：<%= user.following.count %></td>
+    [1;34m20[0m:           <% binding.pry %>
+ => [1;34m21[0m:           <td>フォローワー数：<%= user.followers.count %></td>
+    [1;34m22[0m: 
+    [1;34m23[0m:           <td></td>
+    [1;34m24[0m:           <td><%= link_to "Show", user_path(user.id) %></th>
+    [1;34m25[0m:         </tr>
+    [1;34m26[0m:         <% end %>
+
