@@ -12,5 +12,6 @@ devise_for :users
   end
   root 'homes#top'
    get 'home/about' => "homes#show"
+   get 'search' => "searchs#search"
 
 end
