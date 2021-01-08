@@ -18,6 +18,7 @@ class User < ApplicationRecord
 
   has_many :user_rooms
   has_many :chats
+  has_many :rooms, through: :user_rooms
 
   def follow(other_user)
     following << other_user
