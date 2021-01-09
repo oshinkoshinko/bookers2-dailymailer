@@ -73,3 +73,4 @@ gem 'jp_prefecture'
 gem 'font-awesome-sass'
 
 gem 'kaminari', '~> 1.2.1'
+gem 'whenever', require: false
